@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<h1>My Array</h1>
+<div>
+	Enter Number Of Elements to insert:
+	<input type="text" id="num" name="">
+	<input type="button" value="Print Array" onclick="add()" name=""><br>
+	<div id="get"></div>
+	<h1>Asc</h1>
+	<input type="button" value="AscSort" onclick="asc()" name=""><br>
+	<div id="as"></div>
+	<h1>Dsc</h1>
+    <input type="button" value="DscSort" onclick="dsc()" name=""><br>
+	<div id="ds"></div>
+	<h1>Search</h1>
+	Enter the element to be searched:
+	<input type="text" id="n" name="">
+	<input type="button" value="search" onclick="search()" name=""><br>
+	<div id="s"></div>
+</div>
+<script type="text/javascript">
+	var arr=[];
+	function add(){
+		var num=document.getElementById("num").value;
+		for(var i=0;i<num;i++)
+			arr.push(prompt("Enter number"));
+		document.getElementById("get").innerHTML="The array elements are:"+arr;
+	}
+	function asc(){
+		document.getElementById("as").innerHTML="The ascendingly sorted array elements are:"+arr.sort();
+
+	}
+	function dsc(){
+		document.getElementById("ds").innerHTML="The descendingly sorted array elements are:"+arr.sort().reverse();
+
+	}
+    function search(){
+		var n=document.getElementById("n").value;
+		document.getElementById("s").innerHTML="The element is at index position :"+arr.indexOf(n);
+
+    }
+
+</script>
+
+
+</script>
+</body>
+</html>

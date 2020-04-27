@@ -1,0 +1,77 @@
+<html>
+	<head>
+		<script>
+			function Palindrome()
+			{
+				var rem, temp, final = 0;
+				var number = Number(document.getElementById("N").value);
+
+				temp = number;
+				while(number>0)
+				{
+					rem = number%10;
+					number = parseInt(number/10);
+					final = final*10+rem;
+				}
+				if(final==temp)
+				{
+					window.alert("The number is Palindrome");
+				}
+				else
+				{
+					window.alert("The number is not palindrome");
+				}
+			}
+		</script>
+		<script>
+function findVowels() {
+
+var str=document.getElementById('name').value;  
+
+   var vowelC = 0;
+var total_findVowels="";
+     for (var i = 0; i < str.length; i++) {
+
+     if (str.charAt(i).match(/[a-zA-Z]/) != null) {
+
+        // findVowels
+
+        if (str.charAt(i).match(/[aeiouAEIOU]/))
+  {
+
+ total_findVowels=total_findVowels+str.charAt(i);            
+ vowelC++;
+
+        }
+
+     }
+   }
+  
+   alert("Total Number of Vowels: " + vowelC++);
+ 
+
+}
+    </script>
+	</head>
+	<style >
+		body{
+			background-color: green;
+			text-align: center;
+		}
+	</style>
+	<body>
+		<br>
+		<h1>Whether a number is Palindrome or not</h1>
+		Enter The Number :<input type="text" name="n" id = "N"/>
+		<br><br>
+		<center><button onClick="Palindrome()">CHECK</button><br>
+			<hr color="orange">	
+			
+		<h1>Vowels in the string</h1>
+		Enter The String :<input type="text" name="n" id = 'name'/>
+		<br><br>
+		<center><button id='name' onClick="findVowels()"> TRY IT</button><br>
+			<hr color="orange"><br>
+	</body>
+	
+</html>

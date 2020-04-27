@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html>
+<body>
+
+<h3>Click the button to sort the array.</h3>
+
+<button onclick="myFunction()"> Click</button>
+
+<p id="demo"></p>
+<style>
+	body{
+		background-color: yellow;
+		text-align: center;
+	}
+</style>
+
+<script>
+var fruits = ["Banana", "Grapes", "Jackfruit", "Mango"];
+document.getElementById("demo").innerHTML = fruits;
+
+function myFunction() {
+  fruits.sort();
+  document.getElementById("demo").innerHTML = fruits;
+}
+</script>
+<h3>Click the button to sort the numbers in ascending order</h3>
+
+<button onclick="asd()">Try it</button>
+
+<p id="demo1"></p>
+
+<script>
+var points = [40, 100, 1, 5, 25, 10];
+document.getElementById("demo1").innerHTML = points;
+
+function asd() {
+  points.sort(function(a, b){return a-b});
+  document.getElementById("demo1").innerHTML = points;
+}
+</script>
+<h3>Click the button to sort the numbers in descending order</h3>
+
+<button onclick="desc()"> Click</button>
+
+<p id="demo2"></p>
+
+<script>
+var points = [40, 100, 1, 5, 25, 10];
+document.getElementById("demo2").innerHTML = points;
+
+function desc() {
+  points.sort(function(a, b){return b-a});
+  document.getElementById("demo2").innerHTML = points;
+}
+</script>
+
+
+</body>
+</html>
